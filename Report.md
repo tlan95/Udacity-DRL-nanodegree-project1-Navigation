@@ -116,9 +116,9 @@ Ouput Layer (4 nodes)
 
 With all these hyperparameters and Neural Networks, the result is quite good:
 
-![Training](images/training.png)
+![Training](images/training.PNG)
 
-![Score](images/plot.png)
+![Score](images/plot.PNG)
 
 **The result satisfies the goal of this project as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 698 episodes only**. (According to Udacity benchmark implementation, the environment should be solved in fewer than 1800 episodes.)
 
