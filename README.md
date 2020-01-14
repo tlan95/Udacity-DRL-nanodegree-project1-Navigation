@@ -6,7 +6,7 @@ This repository contains my codes, report and other files for [Udacity Deep Rein
 
 In this Navigation project, the goal is to train an agent to navigate in a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
-![A virtual world full of bananas created by Unity ML-Agents.](/images/navigation_bananas.gif)
+![A virtual world full of bananas created by Unity ML-Agents.](/images/navigation_bananas .gif)
 
 ### Environment details
 
