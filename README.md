@@ -6,6 +6,8 @@ This repository contains my codes, report and other files for [Udacity Deep Rein
 
 In this Navigation project, the goal is to train an agent to navigate in a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
+![bananas](images/bananas.PNG)
+
 ### Environment details
 
 The environment is based on [Unity ML-agents](https://github.com/Unity-Technologies/ml-agents). Unity ML-Agents is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
