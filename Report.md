@@ -27,28 +27,28 @@ The task is episodic, and in order to solve the environment, **the agent must ge
 
 ## Agent details
 
-### Deep Q-Networks
+### Deep Q-Learning
 
-This project implements a *Value Based* method called [Deep Q-Networks](https://deepmind.com/research/dqn/). 
+This project implements a value-based deep reinforcement learning method called Deep Q-Learning. In fact, a Deep Q-Learning algorithm is built by a Deep Q-Network (DQN).
 
-Deep Q Learning combines 2 approaches :
-- A Reinforcement Learning method called [Q Learning](https://en.wikipedia.org/wiki/Q-learning) (aka SARSA max)
-- A Deep Neural Network to learn a Q-table approximation (action-values)
+Generally speaking, Deep Q-Learning combines 2 parts together:
+- A reinforcement learning method called [Q Learning (or SARSA max)](https://en.wikipedia.org/wiki/Q-learning)
+- Deep neural networks to learn an approximation of Q-table (action-values)
 
-Especially, this implementation includes the 2 major training improvements by [Deepmind](https://deepmind.com) and described in their [Nature publication : "Human-level control through deep reinforcement learning (2015)"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+Besides, this implementation includes the 2 major training improvements by [Deepmind](https://deepmind.com) which describes the implementation in their [Nature publication: "Human-level control through deep reinforcement learning (2015)"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
 - Experience Replay 
-- Fixed Q Targets
+> When the agent interacts with the environment, the sequence of experience tuples can be highly correlated. The naive Q-learning algorithm that learns from each of these experience tuples in sequential order runs the risk of getting swayed by the effects of this correlation. By instead keeping track of a replay buffer and using experience replay to sample from the buffer at random, we can prevent action values from oscillating or diverging catastrophically. The replay buffer contains a collection of experience tuples *(S, A, R, S')*. The tuples are gradually added to the buffer as we are interacting with the environment. The act of sampling a small batch of tuples from the replay buffer in order to learn is known as experience replay. In addition to breaking harmful correlations, experience replay allows us to learn more from individual tuples multiple times, recall rare occurrences, and in general make better use of our experience.
 
-> Reinforcement learning is known to be unstable or even to diverge when a nonlinear function approximator such as a neural network is used to represent the action-value (also known as Q) function20. This instability has several causes: the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and therefore change the data distribution, and the correlations
-between the action-values and the target values .
-We address these instabilities with a novel variant of Q-learning, which uses two key ideas. First, we used a biologically inspired mechanism termed experience replay that randomizes over the data, thereby removing correlations in the observation sequence and smoothing over changes in the data distribution. Second, we used an iterative update that adjusts the action-values towards target values that are only periodically updated, thereby reducing correlations with the target.
+- Fixed Q-Targets
+> In Q-Learning, we update a guess with a guess, and this can potentially lead to harmful correlations. In TD error calculation, target function is changed frequently with deep neural networks. Unstable target function makes training difficult. So Q-Target Network technique fixes parameters of target function and replaces them with the latest network every desired updating steps.
 
 ### Algorithm
 
-![Deep Q-Learning algorithm from Udacity course](./images/DQN.png)
+According to the [paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) of Deepmind, Deep Q-Learning algorithm is shown below.
+![Deep Q-Learning algorithm from the paper](./images/DQNPaperAlgo.PNG)
 
-This algorithm screenshot is taken from the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)
-
+As for my Project1 Navigation, I implemented Deep Q-Learning algorithm according to [Udacity Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)
+![Deep Q-Learning algorithm from Udacity course](./images/DQNVideoAlgo.png)
 
 ### Code implementation
 
