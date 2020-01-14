@@ -114,6 +114,7 @@ Fully Connected Hidden Layer (1024 nodes, relu activation function) ->
 Ouput Layer (4 nodes)
 ```
 
+## Result
 With all these hyperparameters and Neural Networks, the result is quite good:
 
 ![Training](images/training.PNG)
@@ -122,7 +123,7 @@ With all these hyperparameters and Neural Networks, the result is quite good:
 
 **The result satisfies the goal of this project as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 698 episodes only**. (According to Udacity benchmark implementation, the environment should be solved in fewer than 1800 episodes.)
 
-### Ideas for future work
+## Ideas for future work
 
 Firstly, according to the Udacity course, a further evolution to this project would be to train the agent directly from the environment's observed raw pixels instead of using the environment's internal states (37 dimensions). In order to solve this environment, a [Convolutional Neural Network](https://en.wikipedia.org/wiki/Convolutional_neural_network) should be added at the input of the network with the purpose of processing the raw pixels values.
 
